@@ -1,0 +1,32 @@
+w klasie user stats
+init wiadomo
+
+get user pobiera link z linku profilu id za pomocą
+re.search
+
+get_api_link łączy id pobrane z funkcji get_user_id id
+i wywala pełny link z json
+
+get_json pobiera json do pythona
+
+get_data wybiera z jsona potrzebne dane, zamienia je na rekord
+i wszystkie wprowadza do słownika
+
+dane są zamieniane w module converter.py
+
+funkcje dateCon i timeCon za pomocą biblioteki datetime
+zamieniają timestampy na normalny czas oraz dateCon
+
+funkcja nameCon za pomocą request pobiera link steama
+z grą za pomocą game id (jednego z kluczy w słowniku głównym)
+
+beutifulSoup szuka w html strony pełnego linku z grąw którym
+zawarta jest jej nazwa
+
+dalej usównay jest ostatni ukośnik.
+link zostaje podzielony za pomocą split
+['https', 'steamapp.com', 'game', '54211', 'nazwa_gry']
+póżniej zostaje wzięta tylko nazwa gry jako ostatni element
+znów jest dzielona aby usunąć _ i łączona aby mieć nazwę
+
+podmienione zostaje w słowniku 4321 na nazwę gry
